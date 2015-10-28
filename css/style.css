@@ -298,6 +298,71 @@ h1.logo:before {
 	border: solid 2px #dfe8ed;
 }
 
+.pie {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-indent: -9999px;
+}
+
+.pie-center {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.pie::before {
+  content: " ";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.more-than-50 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: red;
+  border-radius: 50% 0 0 50%;
+  clip: rect(0 50px 100px 0);
+  overflow: hidden;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  z-index: 20;
+}
+
+.less-than-50 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 0 50% 50% 0;
+  clip: rect(0px, 100px, 100px, 50px);
+  overflow: hidden;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
 #portfolio {
 	background-color: #f6dc9b;
 	color: #393939;
