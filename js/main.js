@@ -168,4 +168,4 @@ function Portfolio(el,itemTag) {
 
 new FormWithLabels(document.getElementsByTagName('form')[0]);
 
-var portf = new Portfolio(document.getElementById('portfolio'),'div');
+new Portfolio(document.getElementById('portfolio'),'div');

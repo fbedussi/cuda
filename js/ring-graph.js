@@ -37,6 +37,17 @@
               more50.style.transform = prefix+"rotate("+d+"deg)";
         }
         });
-    }        
-    window.ringGraph = drawPie;
+    }
+    
+    function setup() {
+        var init = false;
+        window.addEventListener('scroll', function(){
+			
+			if (!init && document.body.scrollTop > document.getElementById('skills').offsetTop - 300) {
+				drawPie();
+                init = true;
+			}
+		})
+    }
+    window.ringGraph = setup;
 })()
