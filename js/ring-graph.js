@@ -41,9 +41,14 @@
     
     function setup() {
         var init = false;
-        window.addEventListener('scroll', function(){
+        
+        if (document.scrollingElement === undefined) { //Firefox & IE
+            document.scrollingElement = document.documentElement;
+        }
+
+        document.addEventListener('scroll', function(){
 			
-			if (!init && document.body.scrollTop > document.getElementById('skills').offsetTop - 300) {
+			if (!init && document.scrollingElement.scrollTop > document.getElementById('skills').offsetTop - 300) {
 				drawPie();
                 init = true;
 			}
